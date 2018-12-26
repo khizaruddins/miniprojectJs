@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  .colors{
+    color:#fff;
+    background:red;
+  }
+  .special{
+    color:white;
+    background:red;
+    font-size:2em;
+  }
+  .hide-elements{
+    display:none;
+  }
+  .show-elements{
+    display: block;
+  }
+  .text{
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+  .show{
+    background:blue;
+    color:white;
+    font-size: 3rem;
+  }
+</style>
+<body>
+  <ul class="first1">
+    <li class="item">list item</li>
+    <li>list item</li>
+  </ul>
+  <div id="second1">
+    i have some text content
+  </div>
+  <br>
+  <br>
+  <div class="styleWithJs">
+    im a text looking for css style from js
+  </div>
+  <br>
+  <div id="result1">
+    <div class="show">i'm the child of the result1</div>
+    <!-- appending elements from here -->
+  </div>
+  <h1>hello this is heading one paragraph</h1>
+  <p id="output">
+    the output is:
+  </p>
+  <h1 id="first" class="colors">im first element</h1>
+  <h1 id="second">im second element</h1>
+  <h1 id="third">im third element</h1>
+  <ul id="result">
+    <li class="first" id="element">first</li>
+    <li>list element 2</li>
+    <li>list element 3</li>
+    <li id="special">list element 4</li>
+    <li class="last">last</li>
+  </ul>
+  <button type="button" id="clickMe">Click Me</button>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

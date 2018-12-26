@@ -1,0 +1,65 @@
+@font-face{
+    font-family: digital-font;
+    src: url(static/digital-7.ttf);
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom,black,black,#333, grey,white);
+    font-family: 'calibri', sans-serif;
+    color: #fff;
+}
+
+.counter-box{
+    text-align: center;
+}
+
+.counter-box h1{
+    font-weight: lighter;
+    font-size: 1.8rem;
+    letter-spacing: 10px;
+}
+
+.numerical{
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+#counter{
+    font-size: 12rem;
+    font-weight: lighter;
+    color: rgb(255, 71, 71);
+    font-family: digital-font;
+    margin: 0px;
+    padding-bottom: 70px;
+    text-shadow: 50px 50px 20px #4a4c4d;
+}
+
+button{
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 2px 3px 2px 2px #4a4c4d;
+}
+
+button:active{
+    box-shadow: none;
+}
+
+#lowerCountBtn{ 
+    background: linear-gradient(to right, rgb(42, 236, 227), rgb(7, 86, 255));
+    color: rgb(255, 255, 255);
+}
+
+#addCountBtn{ 
+    background: linear-gradient(to right, rgb(217, 140, 255), rgb(243, 92, 66));
+    color: rgb(255, 255, 255);
+}
