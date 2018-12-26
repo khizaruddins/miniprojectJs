@@ -1,0 +1,74 @@
+// variables 
+// colors
+$blue : rgb(0,0,255);
+$white : #fff;
+$darkInk : rgb(41, 41, 56);
+$black : #000;
+$darkYellow : rgb(245,146,62);
+$lightWhite : rgb(224, 224, 224);
+$green : green;
+$red : red; 
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    flex: 0 0 95%;
+}
+
+.screen{
+    width: 100%;
+    font-size: 7rem;
+    padding: 0.5rem;
+    background: $darkInk;
+    color:  $white;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s linear;
+}
+
+button{
+    flex: 0 0 25%;
+    border: 1px solid $black;
+    padding: 0.5rem 0;
+    transition: all 2s ease;
+    &:hover{
+        background: $blue;
+    }
+}
+
+.btn-yellow{
+    background:$darkYellow;
+    color: $white;
+}
+
+.btn-grey{
+    background: $lightWhite;
+}
+.btn,
+.btn-equal,
+.btn-clear{
+    font-size: 4rem;
+}
+
+.btn-equal{
+    background: $green;
+}
+
+.btn-clear{
+    background: $red;
+}
