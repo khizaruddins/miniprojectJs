@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width,initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Navbar Project
+        link(href="style.css", rel="stylesheet")
+        script(defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous")
+    body
+        nav.navbar
+            .navbar__header
+                img.navbar__logo(src="img/logo.svg" alt="logo" title="nav logo")
+                .navbar__btn
+                    .bar.bar1
+                    .bar.bar2
+                    .bar.bar3
+            ul.navbar__links
+                // single link
+                li
+                    a.navbar__single-link(href="#" title="goto home")
+                        i.fas.fa-home 
+                        | Home
+                li
+                    a.navbar__single-link(href="#" title="goto HTML")
+                        i.fab.fa-html5
+                        | HTML
+                li
+                    a.navbar__single-link(href="#" title="goto CSS")
+                        i.fab.fa-css3
+                        | CSS
+                li
+                    a.navbar__single-link(href="#" title="goto JS")
+                        i.fab.fa-js
+                        | JS
+        header
+        script(src="script.js")
+            

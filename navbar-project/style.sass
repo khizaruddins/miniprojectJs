@@ -1,0 +1,70 @@
+// color variables
+$blueColor: #7e92ff
+$greyColor: #69747c
+$darkGreyColor: #545454
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.navbar__header
+    background:#545454
+    display: flex
+    justify-content: space-between
+    padding: 0.5rem 1rem
+    border-bottom: 0.3rem solid $blueColor
+
+.navbar__btn
+    align-self: center
+    border: 5px solid $blueColor
+    cursor: pointer
+
+.bar1,
+.bar2,
+.bar3
+    width: 30px
+    height: 5px
+    margin: 0.5rem
+    background: $blueColor
+    transition: all 2s ease
+
+.change
+    .bar1
+        transform: rotate(-47deg) translate(-10px,10px)
+    .bar2
+        opacity: 0
+    .bar3
+        transform: rotate(45deg) translate(-8px,-8px)
+
+.navbar__links
+    list-style-type: none
+    transition: all 2s ease
+    // hello
+    height: 0
+    overflow: hidden
+
+.navbar__collapse
+    height: 240px
+
+
+.navbar__single-link
+    display: block
+    background: $greyColor
+    padding: 1rem
+    font-size: 1.5rem
+    text-decoration: none
+    text-transform: capitalize
+    color: $blueColor
+    transition: all 1s ease;
+    cursor: pointer
+    &:hover
+        padding-left: 1.5rem
+        background: $darkGreyColor
+
+header
+    min-height: calc(100vh - 95px)
+    background: url('img/bg.jpeg') center/cover no-repeat
+
+.navbar__logo
+    height: 80px
