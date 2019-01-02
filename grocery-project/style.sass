@@ -1,0 +1,132 @@
+// variables 
+// color
+$lightBlack: #272932
+$darkBlue: #4d7ea8
+$lightBlue: #b6c2d9
+$darkGrey: #828489
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    display: grid
+    grid-template-columns: 80%
+    justify-content: center
+    margin-top: 3rem
+    background: $darkGrey
+
+.addItems-container
+    background: $darkBlue
+
+.addItems-container,
+.displayItems-container
+    margin: 1rem 0
+    padding: 2rem
+    border-radius: 0.5rem
+    text-align: center
+    border: 1px solid $lightBlack
+    box-shadow: 0 5px 10px $lightBlack
+
+.addItems-title,
+.displayItems-title
+    text-transform: capitalize
+
+.addItems-title
+    color: $lightBlue
+
+.addItems-action,
+.displayItems-action
+    border: 2px solid $lightBlack
+    padding: 0.5rem 0
+    text-transform: capitalize
+    border-radius: 0.5rem
+    display: none
+
+.addItems-input
+    background: transparent
+    border: none
+    border-bottom: 2px solid $lightBlack
+    width: 100%
+    font-size: 2rem
+    padding: 0.5rem
+    color: $lightBlack
+    outline: none
+    text-transform: uppercase
+
+.addItems-submit,
+.displayItems-clear
+    display: block
+    width: 80%
+    margin: 2rem auto 0 auto
+    font-size: 1.5rem
+    border-radius: 0.5rem
+    cursor: pointer
+    text-transform: capitalize
+    outline: none
+
+.addItems-submit
+    color: $lightBlue
+    background: transparent
+    border: 3px solid $lightBlue
+    transition: all 2s ease
+    &:hover
+        background: $lightBlue
+        color: $lightBlack
+    
+.displayItems-container
+    background: $lightBlue
+
+.displayItems-title
+    color: $darkBlue
+    margin-bottom: 0.25rem
+
+.grocery-item
+    display: grid
+    grid-template-columns: 4fr 1fr
+    align-items: center
+    border-radius: 0.5rem
+    padding: 0.5rem
+    transition: all 1s ease-in-out
+    margin-left: 0.5rem 0
+    &:hover
+        background: $darkGrey
+        .grocery-item__link
+            transform: scale(1.6)
+    
+.grocery-item__title
+    text-align: left
+    margin-left: 0.5rem
+    font-size: 1.2rem
+    text-transform: capitalize
+    color: $lightBlack
+
+.grocery-item__link
+    color: red
+    transition: all 2s linear
+
+.displayItems-clear
+    color: $darkBlue
+    background: transparent
+    border: 3px solid $darkBlue
+    transition: all 2s ease
+    &:hover
+        background: $darkBlue
+        color: $lightBlack
+    
+.alert
+    color: red
+    border-color: red
+    display: block
+    margin-bottom: 0.5rem
+
+.success
+    color: greem
+    border-color: green
+    display: block
+    margin-bottom: 0.5rem
+
+@media screen and (min-width: 768px)
+    body
+        grid-template-columns: 50%
+        

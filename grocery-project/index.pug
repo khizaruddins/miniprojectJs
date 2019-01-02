@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        link(rel="stylesheet", href="style.css")
+        script(defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous")
+        title Grocery List
+    body
+        // add items
+        .addItems-container
+            h4.addItems-action Display Action
+            h2.addItems-title Add Grocery items
+            form
+                input.addItems-input(type="text" name="" id="")
+                button.addItems-submit(type="submit") Submit here
+        // display items
+        .displayItems-container
+            h4.displayItems-action display action
+            h2.displayItems-title grocery items
+            .grocery-list
+                //-  grocery item
+                //- .grocery-item
+                //-     h4.grocery-item__title item
+                //-     a.grocery-item__link(href="#")
+                //-         i.far.fa-trash-alt
+                //- // end grocery item
+            button.displayItems-clear(type="submit") clear items
+        // end display items
+
+        script(src="script.js")
+        
