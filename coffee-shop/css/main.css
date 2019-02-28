@@ -58,6 +58,10 @@ body{
     padding: 1rem 0.5rem;
 }
 
+.section-title--left{
+    margin-left: 10rem;
+}
+
 .section-title__name{
     font-size: 3rem;
     text-transform: capitalize;
@@ -182,6 +186,7 @@ body{
     animation-name: pulse;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    z-index: 3;
 }
 
 /* nav animation */
@@ -410,5 +415,217 @@ body{
     .drink-card__list{
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
+    }
+}
+
+/* work container */
+.work-container{
+    max-width: 90vw;
+    margin: 2rem auto;
+}
+
+.work-item__image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 1s linear;
+}
+
+.work-item{
+    background: linear-gradient(to right,var(--yellow), var(--brown));
+    overflow: hidden;
+    position: relative;
+}
+
+.work-item:hover .work-item__image{
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+.work-item__icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    transform: scale(0);
+    color: var(--brightYellow);
+}
+
+.work-item:hover .work-item__icon{
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.work-item__icon:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px){
+    .work-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .work-container{
+        height: 120vh;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "one one two three"
+        "one one four four"
+        "five six seven seven"
+        "eight nine seven seven"
+    }
+
+    .item-1{
+        grid-area: one;
+    }
+
+    .item-2{
+        grid-area: two;
+    }
+
+    .item-3{
+        grid-area: three;
+    }
+
+    .item-4{
+        grid-area: four;
+    }
+
+    .item-5{
+        grid-area: five;
+    }
+
+    .item-6{
+        grid-area: six;
+    }
+
+    .item-7{
+        grid-area: seven;
+    }
+
+    .item-8{
+        grid-area: eight;
+    }
+
+    .item-9{
+        grid-area: nine;
+    }
+}
+
+/* modal section */
+
+.work-modal{
+    display: none;
+}
+
+.work-modal--show{
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-modal__item{
+    background: url('../img/work-1.jpeg') center/cover;
+    height: 70vh;
+    width: 80vw;
+    border-radius: 0.4rem;
+    border: 0.5rem solid var(--yellow);
+}
+
+@media screen and (min-width: 768px){
+    .work-modal__item{
+        height: 80vh;
+        width: 60vw;
+
+    }
+}
+
+.work-modal__close{
+    position: fixed;
+    font-size: 3rem;
+    color: var(--brightYellow);
+    bottom: 5%;
+    right: 5%;
+    transition: color 0.5s linear;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.work-modal__close:hover{
+    color: red;
+}
+
+/* contact */
+
+.contact-container{
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 1rem;
+}
+
+.contact-info{
+    display: grid;
+    justify-content: center;
+}
+
+.contact-item{
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.contact-item__icon{
+    font-size: 3rem;
+    color: var(--yellow);
+}
+
+.contact-item__title{
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    letter-spacing: 0.25rem;
+    font-style: italic;
+}
+
+.contact-item__text{
+    font-size: 1rem:
+    text-transform: uppercase;
+    color: var(--grey);
+}
+
+@media screen and (min-width: 768px){
+    .contact-info{
+        grid-template-columns: repeat(3, 1fr);
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .contact-info{
+        grid-template-columns:  1fr;
+        order: 0;
+    }
+    .contact-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 2rem;
+    }
+    .contact-map{
+        align-self: center;
     }
 }
