@@ -19,6 +19,5 @@ mainBtn.addEventListener('click', function(){
     ajax.onerror = function() {
         console.log('there was an error');
     }
-
     ajax.send();
 })
